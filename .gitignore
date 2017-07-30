@@ -1,0 +1,25 @@
+# App artifacts
+/_build
+/db
+/deps
+/*.ez
+
+# Generated on crash by the VM
+erl_crash.dump
+
+# Files matching config/*.secret.exs pattern contain sensitive
+# data and you should not commit them into version control.
+#
+# Alternatively, you may comment the line below and commit the
+# secrets files as long as you replace their contents by environment
+# variables.
+/config/*.secret.exs
+
+# We're node too!
+/node_modules
+
+# We're yarn! So don't, like, use the npm lockfile!
+/package-lock.json
+
+# We don't need to commit bundled assets as well.
+/priv/static
