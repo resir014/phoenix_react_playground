@@ -38,6 +38,9 @@ export default class Home extends React.Component<{}, {}> {
               <li>
                 <Link to="/counter">Counter</Link>
               </li>
+              <li>
+                <Link to="/fetch-data">Fetch Data</Link>
+              </li>
             </ul>
           </Col>
 
