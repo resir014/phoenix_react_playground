@@ -2,7 +2,7 @@
 
 > A sample Phoenix+React project that *actually works*.
 
-This repo is originally made as a supplement to this guide (**TODO:** link pending). Feel free to use this as a base for your Phoenix+React project, however, everything would make sense if you read the original guide first, so probably go do that first. Don't worry, I'll wait.
+This repo is originally made as a supplement to [this guide](https://resir014.github.io/blog/2017/08/09/a-phoenix-react-initial-setup-that-actually-works/). Feel free to use this as a base for your Phoenix+React project, however, everything would make sense if you read the original guide first, so probably go do that first. Don't worry, I'll wait.
 
 The commit logs outline steps taken on the aforementioned guide, to make it easier to follow.
 
@@ -31,7 +31,7 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+Ready to run in production? Please [check out the deployment guides provided by Phoenix](http://www.phoenixframework.org/docs/deployment).
 
 ## Learn more
 
