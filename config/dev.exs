@@ -14,8 +14,9 @@ config :phoenix_react_playground, PhoenixReactPlaygroundWeb.Endpoint,
   watchers: [
     {"node", [
       "node_modules/webpack/bin/webpack.js",
-      "--watch-stdin",
-      "--colors"
+      "--mode", "development",
+      "--watch",
+      cd: Path.expand("../assets", __DIR__)
     ]}
   ]
 

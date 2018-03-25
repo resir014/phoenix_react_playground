@@ -19,11 +19,11 @@ const plugins = {
 module.exports = {
   devtool: 'source-map',
   entry: [
-    path.join(__dirname, 'assets/js/app.tsx'),
-    path.join(__dirname, 'assets/scss/app.scss')
+    path.join(__dirname, 'js/app.tsx'),
+    path.join(__dirname, 'scss/app.scss')
   ],
   output: {
-    path: path.join(__dirname, '/priv/static'),
+    path: path.join(__dirname, '../priv/static'),
     filename: 'js/app.js'
   },
   module: {
@@ -60,16 +60,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin([
-      path.join(__dirname, 'priv/static')
+      path.join(__dirname, '../priv/static')
     ]),
-    // Important to keep React file size down
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify(env)
-      }
-    }),
     new CheckerPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
     new ExtractTextPlugin({
       filename: 'css/app.css',
       allChunks: true
@@ -86,8 +79,8 @@ module.exports = {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      phoenix: path.join(__dirname, '/deps/phoenix/priv/static/phoenix.js'),
-      phoenix_html: path.join(__dirname, '/deps/phoenix_html/priv/static/phoenix_html.js')
+      phoenix: path.join(__dirname, '../deps/phoenix/priv/static/phoenix.js'),
+      phoenix_html: path.join(__dirname, '../deps/phoenix_html/priv/static/phoenix_html.js')
     }
   }
 }
