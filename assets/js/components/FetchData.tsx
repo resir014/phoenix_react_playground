@@ -20,8 +20,8 @@ interface FetchDataExampleState {
 }
 
 export default class FetchData extends React.Component<{}, FetchDataExampleState> {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = { languages: [], loading: true }
 
     // Get the data from our API.
