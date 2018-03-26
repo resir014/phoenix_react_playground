@@ -9,8 +9,8 @@ interface CounterState {
 const initialState = { currentCount: 0 }
 
 export default class Counter extends React.Component<{}, CounterState> {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = initialState
   }
 

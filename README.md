@@ -6,27 +6,43 @@ This repo is originally made as a supplement to [this guide](https://resir014.gi
 
 The commit logs outline steps taken on the aforementioned guide, to make it easier to follow.
 
+## A quick note
+
+This repo has undergone some substantial changes since I wrote the article mentioned above. I've started learning much about Elixir/Phoenix development, and so I've felt that a rewrite of this starter pack is long overdue.
+
+Some changes include:
+
+* upgraded to webpack 4 to make use of the brand-new optimisation strategies included out of the box, all with a smaller configuration file,
+* moved all the frontend stuff back inside the `assets/` directory; and also
+* upgraded all dependencies to the latest version.
+
 ## What's in the ~~box~~ repo
 
 This repo contains a [Phoenix](http://www.phoenixframework.org/) app hooked up to a React frontend, which includes a basic example of your typical React app.
 
-## The stack
+Bundling is done with [webpack 4](https://webpack.js.org/). The webpack team have done a great job to improve optimisation efforts as well as reducing the amount of configuration time required in version 4.
 
-* Elixir (^1.5.0)
-* Node.js (^8.2.1)
-* npm (^5.3.0)
-* Phoenix (^1.3.0)
-* React (^15.6.1)
-* TypeScript (^2.4.2)
-* Webpack (^3.4.1)
+[Yarn](https://yarnpkg.com/en/) is used as our package manager. It features a robust lockfile which ensures your dependencies are identical across different devices. This is optional, but I recommend it for your own sanity.
+
+Instead of plain JavaScript, we're going to use [TypeScript](https://www.typescriptlang.org). TypeScript is a superset of JavaScript which adds additional static typing, which is really helpful for [detecting bugs during compile time](https://blog.acolyer.org/2017/09/19/to-type-or-not-to-type-quantifying-detectable-bugs-in-javascript/).
+
+## Requirements
+
+* [Node.js](https://nodejs.org/en) (v8+)
+* [Elixir](https://elixir-lang.org/install.html) (v1.6+)
+* [Yarn](https://yarnpkg.com/en/docs/install) - optional. You can use `npm` if you want, but it's for your own sanity.
 
 ## Getting started
 
-To start your Phoenix server:
+To install dependencies and configure your project:
 
-* Install dependencies with `mix deps.get` and `npm install`, in that order.
+* Install Elixir dependencies with `mix deps.get`.
+* `cd` to the `assets/` directory and run `yarn` (or `npm install`) to install Node.js dependencies.
 * Modify the database settings in each `config/` files according to your needs.
 * Create and migrate your database with `mix ecto.setup` (this runs `mix ecto.create`, `mix ecto.migrate` and `mix run priv/repo/seeds.exs` in order)
+
+To start your Phoenix server:
+
 * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
