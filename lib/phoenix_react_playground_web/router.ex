@@ -20,8 +20,13 @@ defmodule PhoenixReactPlaygroundWeb.Router do
   end
 
   scope "/", PhoenixReactPlaygroundWeb do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/*path", PageController, :index
   end
+
+  # Other scopes may use custom stacks.
+  # scope "/api", PhoenixReactPlaygroundWeb do
+  #   pipe_through :api
+  # end
 end

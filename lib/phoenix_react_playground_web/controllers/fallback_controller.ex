@@ -9,12 +9,14 @@ defmodule PhoenixReactPlaygroundWeb.FallbackController do
   def call(conn, {:error, %Ecto.Changeset{} = changeset}) do
     conn
     |> put_status(:unprocessable_entity)
-    |> render(PhoenixReactPlaygroundWeb.ChangesetView, "error.json", changeset: changeset)
+    |> put_view(PhoenixReactPlaygroundWeb.ChangesetView)
+    |> render("error.json", changeset: changeset)
   end
 
   def call(conn, {:error, :not_found}) do
     conn
     |> put_status(:not_found)
-    |> render(PhoenixReactPlaygroundWeb.ErrorView, :"404")
+    |> put_view(PhoenixReactPlaygroundWeb.ErrorView)
+    |> render(:"404")
   end
 end

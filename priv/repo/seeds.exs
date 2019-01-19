@@ -13,7 +13,7 @@ defmodule PhoenixReactPlayground.DatabaseSeeder do
   and so on) as they will fail if something goes wrong.
   """
   alias PhoenixReactPlayground.Repo
-  alias PhoenixReactPlayground.Examples.Language
+  alias PhoenixReactPlayground.Example.Language
 
   # Clear the database first before seeding
   Repo.delete_all Language

@@ -1,7 +1,6 @@
-defmodule PhoenixReactPlayground.Examples.Language do
+defmodule PhoenixReactPlayground.Example.Language do
   use Ecto.Schema
   import Ecto.Changeset
-  alias PhoenixReactPlayground.Examples.Language
 
 
   schema "languages" do
@@ -12,7 +11,7 @@ defmodule PhoenixReactPlayground.Examples.Language do
   end
 
   @doc false
-  def changeset(%Language{} = language, attrs) do
+  def changeset(language, attrs) do
     language
     |> cast(attrs, [:name, :proverb])
     |> validate_required([:name, :proverb])

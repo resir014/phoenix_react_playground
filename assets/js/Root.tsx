@@ -1,20 +1,22 @@
-import * as React from 'react'
-import { Container } from 'reactstrap'
+import * as React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-export default class Root extends React.Component<{}, {}> {
-  public render(): JSX.Element {
-    return (
-      <div>
-        <Container className="mt-4">
-          <header className="header">
-            <span className="logo"></span>
-          </header>
+import Header from './components/Header';
+import HomePage from './pages';
+import CounterPage from './pages/counter';
+import FetchDataPage from './pages/fetch-data';
 
-          <main role="main">
-            {this.props.children}
-          </main>
-        </Container>
-      </div>
-    )
-  }
-}
+const Root: React.FC = () => (
+  <>
+    <Header />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/counter" component={CounterPage} />
+        <Route path="/fetch-data" component={FetchDataPage} />
+      </Switch>
+    </BrowserRouter>
+  </>
+);
+
+export default Root;

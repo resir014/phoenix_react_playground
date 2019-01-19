@@ -4,17 +4,9 @@
 
 This repo is originally made as a supplement to [this guide](https://resir014.github.io/blog/2017/08/09/a-phoenix-react-initial-setup-that-actually-works/). Feel free to use this as a base for your Phoenix+React project, however, everything would make sense if you read the original guide first, so probably go do that first. Don't worry, I'll wait.
 
-The commit logs outline steps taken on the aforementioned guide, to make it easier to follow.
-
 ## A quick note
 
-This repo has undergone some substantial changes since I wrote the article mentioned above. I've started learning much about Elixir/Phoenix development, and so I've felt that a rewrite of this starter pack is long overdue.
-
-Some changes include:
-
-* upgraded to webpack 4 to make use of the brand-new optimisation strategies included out of the box, all with a smaller configuration file,
-* moved all the frontend stuff back inside the `assets/` directory; and also
-* upgraded all dependencies to the latest version.
+Phoenix 1.4 ships with [Webpack](https://webpack.js.org/) by default, therefore making the setup much more straightforward than before. The long-overdue rewrite has been finished, and has also been made up-to-date following recent updates to Phoenix. The [sample repo](https://github.com/resir014/phoenix_react_playground) has also been updated.
 
 ## What's in the ~~box~~ repo
 

@@ -20,26 +20,28 @@ defmodule PhoenixReactPlaygroundWeb do
   def controller do
     quote do
       use Phoenix.Controller, namespace: PhoenixReactPlaygroundWeb
+
       import Plug.Conn
-      import PhoenixReactPlaygroundWeb.Router.Helpers
       import PhoenixReactPlaygroundWeb.Gettext
+      alias PhoenixReactPlaygroundWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/phoenix_react_playground_web/templates",
-                        namespace: PhoenixReactPlaygroundWeb
+      use Phoenix.View,
+        root: "lib/phoenix_react_playground_web/templates",
+        namespace: PhoenixReactPlaygroundWeb
 
       # Import convenience functions from controllers
-      import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
+      import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import PhoenixReactPlaygroundWeb.Router.Helpers
       import PhoenixReactPlaygroundWeb.ErrorHelpers
       import PhoenixReactPlaygroundWeb.Gettext
+      alias PhoenixReactPlaygroundWeb.Router.Helpers, as: Routes
     end
   end
 
